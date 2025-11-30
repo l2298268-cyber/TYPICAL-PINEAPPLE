@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEM-214 Memories</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif; //
+            background-color: #f4e4bc; /* Warm beige background */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: url('https://raw.githubusercontent.com/l2298268-cyber/TYPICAL-PINEAPPLE/main/received_624771257104235.jpeg') no-repeat center/cover; //
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        h1, h2 {
+            margin: 0;
+        }
+
+        nav {
+            background: #8b4513; //
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            display: none; //
+        }
+
+        section.active {
+            display: block; //
+        }
+
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .messages blockquote {
+            font-style: italic;
+            border-left: 5px solid #8b4513;
+            padding-left: 10px;
+            margin: 20px 0;
+        }
+
+        footer {
+            background: #8b4513;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        @media (max-width: 768px) {
+            header { height: 200px; }
+            nav a { display: block; margin: 5px 0; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to STEM-214 Memories</h1>
+        <p>Reliving the laughs, lessons, and fun times we shared.</p>
+    </header>
+    <nav>
+        <a onclick="showSection('home')">Home</a>
+        <a onclick="showSection('gallery')">Gallery</a>
+        <a onclick="showSection('messages')">Messages</a>
+        <a onclick="showSection('about')">About Us</a>
+    </nav>
+    <main>
+        
+        <section id="home" class="active">
+            <h2>Our Story</h2>
+            <p>From 2025 to 2026, STEM-214 was more than a class or a bundle of students. It was a family. Here, we collect some of the moments that made us who we are.</p>
+            <p><em>"The best way to predict the future is to create it." – Peter Drucker</em></p>
+        </section>
+
+        
+        <section id="gallery">
+            <h2>Photo Gallery</h2>
+            <p>A visual journey through our adventures.</p>
+            <div class="gallery">
+                <img src="https://raw.githubusercontent.com/l2298268-cyber/TYPICAL-PINEAPPLE/main/received_624771257104235.jpeg" alt="Memory 1 - First Photo">
+                <p>Caption:</p>
+                <img src="https://raw.githubusercontent.com/l2298268-cyber/TYPICAL-PINEAPPLE/main/received_1092614436380040.jpeg" alt="Memory 2 - Second Photo">
+                <p>Caption: </p>
+                <img src="https://raw.githubusercontent.com/l2298268-cyber/TYPICAL-PINEAPPLE/main/20251016_165412563_iOS.jpg" alt="Memory 3">
+                <p>Caption:</p>
+                <img src="https://raw.githubusercontent.com/l2298268-cyber/TYPICAL-PINEAPPLE/main/20251016_165410590_iOS.jpg" alt="Memory 4">
+                <p>Caption:</p>
+                <img src="https://raw.githubusercontent.com/l2298268-cyber/TYPICAL-PINEAPPLE/main/20251016_165403000_iOS.jpg" alt="Memory 5">
+                <p>Caption:</p>
+                <img src="https://raw.githubusercontent.com/l2298268-cyber/TYPICAL-PINEAPPLE/main/20251016_165401309_iOS.jpg" alt="Memory 6">
+                <p>Caption:</p>
+                <img src="https://raw.githubusercontent.com/l2298268-cyber/TYPICAL-PINEAPPLE/main/20251016_165357626_iOS%201.jpg" alt="Memory 7"> <!-- Note: %20 for space in filename -->
+                <p>Caption:</p>
+                <img src="https://raw.githubusercontent.com/l2298268-cyber/TYPICAL-PINEAPPLE/main/20251016_165357271_iOS.jpg" alt="Memory 8">
+                <p>Caption:</p>
+                <img src="https://raw.githubusercontent.com/l2298268-cyber/TYPICAL-PINEAPPLE/main/20251016_165354755_iOS.jpg" alt="Memory 9">
+                <p>Caption:</p>
+                <img src="https://raw.githubusercontent.com/l2298268-cyber/TYPICAL-PINEAPPLE/main/20251016_165348358_iOS.jpg" alt="Memory 10">
+                <p>Caption:</p>
+                <img src="https://raw.githubusercontent.com/l2298268-cyber/TYPICAL-PINEAPPLE/main/20251016_165348343_iOS.jpg" alt="Memory 11">
+                <p>Caption:</p>
+                
+            </div>
+        </section>
+
+        
+        <section id="messages">
+            <h2>Messages from the Heart</h2>
+            <p>Words that capture our bond.</p>
+            <div class="messages">
+                
+                
+                <p><strong>TO STEM - 214:</strong> </p>
+            </div>
+        </section>
+
+        
+        <section id="about">
+            <h2>About STEM-214</h2>
+
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025-2026 STEM-214. Made with love.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => section.classList.remove('active'));
+            // Show the selected section
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
